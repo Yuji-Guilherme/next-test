@@ -3,12 +3,12 @@ import { redirect } from 'next/navigation';
 import { Title } from '@/components/Title';
 import { Button } from '@/components/Button';
 
-type PageProps = {
+type PageIdProps = {
   params: { id: string };
 };
 
-export default function Page({ params }: PageProps) {
-  if (parseInt(params.id) > 1) redirect('/');
+export default function PageId({ params }: PageIdProps) {
+  if (isNaN(parseInt(params.id)) || parseInt(params.id) > 1) redirect('/');
 
   return (
     <>
