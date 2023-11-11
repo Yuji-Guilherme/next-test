@@ -1,11 +1,13 @@
 import { Title } from '@/components/Title';
 
+import * as S from './style';
+
 export default function Home() {
   return (
     <>
-      <main className="flex items-center justify-center h-full">
+      <S.Main>
         <Title>Simple Test Next.js</Title>
-      </main>
+      </S.Main>
     </>
   );
 }

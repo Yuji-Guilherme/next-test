@@ -1,9 +1,11 @@
 import Link from 'next/link';
 
+import * as S from './style';
+
 function Logo() {
   return (
     <Link href="/">
-      <span className="text-2xl text-zinc-700 font-bold">LOGO</span>
+      <S.Logo>LOGO</S.Logo>
     </Link>
   );
 }

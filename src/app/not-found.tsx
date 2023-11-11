@@ -1,15 +1,15 @@
-import { Button } from '@/components/Button';
+import { HomeButton } from '@/components/Button';
 import { Title } from '@/components/Title';
+
+import * as S from './style';
 
 export default function NotFound() {
   return (
     <>
-      <main className="flex flex-col items-center justify-center h-full gap-9">
+      <S.MainWithGap>
         <Title>{`404, Sorry, there's nothing here`}</Title>
-        <Button href={'/'} dark>
-          Go to Home
-        </Button>
-      </main>
+        <HomeButton />
+      </S.MainWithGap>
     </>
   );
 }

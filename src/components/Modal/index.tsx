@@ -6,8 +6,8 @@ const imageSize = { width: 300, height: 180 };
 
 function Modal() {
   return (
-    <div className="relative">
-      <S.Wrapper>
+    <S.Wrapper>
+      <S.ImageWrapper>
         <Image
           style={{
             width: `${imageSize.width}px`,
@@ -18,17 +18,17 @@ function Modal() {
           width={imageSize.width}
           height={imageSize.height}
         />
-      </S.Wrapper>
-      <div className=" w-12 h-12 flex justify-end items-end bg-gray-200 absolute bottom-0 right-0 rounded-tl-3xl">
-        <span className="absolute top-[-16px] right-0">
+      </S.ImageWrapper>
+      <S.ButtonWrapper>
+        <S.ImageCurveTop>
           <Image
             src={'/svg/image-curve.svg'}
             width={32}
             height={19}
             alt="image curve"
           />
-        </span>
-        <span className="absolute -scale-x-100 left-[-22px] top-[23px]">
+        </S.ImageCurveTop>
+        <S.ImageCurveLeft>
           <Image
             className="rotate-90"
             src={'/svg/image-curve.svg'}
@@ -36,12 +36,18 @@ function Modal() {
             height={19}
             alt="image curve"
           />
-        </span>
-        <button className="w-10 h-10 bg-black text-gray-50 text-sm rounded-full">
-          Op
-        </button>
-      </div>
-    </div>
+        </S.ImageCurveLeft>
+        <S.Button>
+          <Image
+            className="-rotate-90 group-hover:scale-110 transition-transform"
+            src={'/svg/arrow.svg'}
+            width={12}
+            height={12}
+            alt="arrow"
+          />
+        </S.Button>
+      </S.ButtonWrapper>
+    </S.Wrapper>
   );
 }
 

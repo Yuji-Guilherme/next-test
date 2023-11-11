@@ -1,7 +1,9 @@
 import { redirect } from 'next/navigation';
 
 import { Title } from '@/components/Title';
-import { Button } from '@/components/Button';
+import { HomeButton } from '@/components/Button';
+
+import { MainWithGap } from '../style';
 
 type PageIdProps = {
   params: { id: string };
@@ -12,12 +14,10 @@ export default function PageId({ params }: PageIdProps) {
 
   return (
     <>
-      <main className="flex flex-col items-center justify-center h-full gap-9">
+      <MainWithGap>
         <Title>Simple Page {params.id}</Title>
-        <Button href={'/'} dark>
-          Go to Home
-        </Button>
-      </main>
+        <HomeButton />
+      </MainWithGap>
     </>
   );
 }

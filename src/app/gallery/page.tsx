@@ -1,19 +1,20 @@
 import { Title } from '@/components/Title';
-import { Button } from '@/components/Button';
+import { HomeButton } from '@/components/Button';
 import { Modal } from '@/components/Modal';
+
+import { MainWithGap } from '../style';
+import * as S from './style';
 
 export default function Gallery() {
   return (
-    <main className="flex flex-col items-center justify-center h-full gap-9">
+    <MainWithGap>
       <Title>Gallery</Title>
-      <div className="flex items-center justify-between gap-6">
+      <S.ModalWrapper>
         <Modal />
         <Modal />
         <Modal />
-      </div>
-      <Button href={'/'} dark>
-        Go to Home
-      </Button>
-    </main>
+      </S.ModalWrapper>
+      <HomeButton />
+    </MainWithGap>
   );
 }

@@ -8,8 +8,12 @@ function Header() {
     <S.Header>
       <Logo />
       <S.Nav>
-        <Button href={'/gallery'}>Gallery</Button>
-        <Button href={'/1'}>Page 1</Button>
+        <Button icon="gallery" href={'/gallery'}>
+          Gallery
+        </Button>
+        <Button icon="file" href={'/1'}>
+          Page 1
+        </Button>
         <Button href={'https://github.com/Yuji-Guilherme/next-test'} dark>
           Github
         </Button>
