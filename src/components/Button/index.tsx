@@ -13,7 +13,7 @@ export type ButtonProps = {
   icon?: Icons;
 };
 
-const font = Montserrat({ subsets: ['latin'] });
+const font = Montserrat({ subsets: ['latin'], weight: '500' });
 
 function Button({ children, href, icon, dark = false }: ButtonProps) {
   const isExternalLink = href.toString().startsWith('http');

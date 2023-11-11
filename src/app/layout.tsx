@@ -1,9 +1,9 @@
-import { Bitter } from 'next/font/google';
 import type { Metadata } from 'next';
-
+import { Bitter } from 'next/font/google';
 import './index.css';
 
 import { Header } from '@/patterns/Header';
+import { PageTransition } from '@/patterns/PageTransition';
 
 const font = Bitter({ subsets: ['latin'] });
 
@@ -20,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={font.className}>
-        <Header />
-        {children}
+        <PageTransition>
+          <Header />
+          {children}
+        </PageTransition>
       </body>
     </html>
   );
