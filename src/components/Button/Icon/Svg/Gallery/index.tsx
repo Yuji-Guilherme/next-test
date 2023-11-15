@@ -1,5 +1,7 @@
 import { SVGProps } from 'react';
 
+import { svgClassName } from '../style';
+
 function GallerySvg({
   className,
   stroke,
@@ -13,7 +15,7 @@ function GallerySvg({
       viewBox="0 0 3.2042456 3.1832359"
       version="1.1"
       id="svg1"
-      className="group-hover:scale-110 transition-transform"
+      className={svgClassName}
       {...rest}
     >
       <g id="layer2" transform="translate(-119.55997,-142.26382)">

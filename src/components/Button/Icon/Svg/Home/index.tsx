@@ -1,11 +1,8 @@
 import { SVGProps } from 'react';
 
-function HomeSvg({
-  className,
-  stroke,
-  fill = 'none',
-  ...rest
-}: SVGProps<SVGSVGElement>) {
+import { svgClassName } from '../style';
+
+function HomeSvg({ className, stroke, ...rest }: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="3.0595193mm"
@@ -13,7 +10,7 @@ function HomeSvg({
       viewBox="0 0 3.0595193 2.7819281"
       version="1.1"
       id="svg1"
-      className="group-hover:scale-110 transition-transform"
+      className={svgClassName}
       {...rest}
     >
       <g id="layer2" transform="translate(-84.244555,-130.7521)">
@@ -23,7 +20,7 @@ function HomeSvg({
               id="path1"
               className={className}
               style={{
-                fill: fill,
+                fill: 'none',
                 fillOpacity: 1,
                 stroke: stroke,
                 strokeWidth: 0.3,

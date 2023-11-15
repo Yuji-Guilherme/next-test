@@ -1,5 +1,5 @@
-import { Button } from '@/components/Button';
 import { Logo } from '@/components/Logo';
+import { Button } from '@/components/Button';
 
 import * as S from './style';
 

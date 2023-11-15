@@ -1,5 +1,5 @@
-import { HomeButton } from '@/components/Button';
 import { Title } from '@/components/Title';
+import { HomeButton } from '@/components/Button';
 
 import * as S from './style';
 

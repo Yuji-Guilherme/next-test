@@ -1,6 +1,6 @@
-import { FileSvg, HomeSvg, GallerySvg } from './Svg';
-
 import { SVGProps } from 'react';
+
+import { FileSvg, HomeSvg, GallerySvg } from './Svg';
 
 export type Icons = 'home' | 'file' | 'gallery';
 

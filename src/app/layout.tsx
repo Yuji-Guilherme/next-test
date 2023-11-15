@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Bitter } from 'next/font/google';
-import './index.css';
 
-import { Header } from '@/patterns/Header';
 import { PageTransition } from '@/patterns/PageTransition';
+import { Header } from '@/patterns/Header';
+
+import './index.css';
 
 const font = Bitter({ subsets: ['latin'] });
 

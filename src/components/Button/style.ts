@@ -1,31 +1,33 @@
 import tw from 'tailwind-styled-components';
-import type { ButtonProps } from '.';
 
-type StyledButtonProps = Pick<ButtonProps, 'dark'>;
+type $Dark = boolean;
+
+type StyledButtonProps = { $dark: $Dark };
 
 const Button = tw.button<StyledButtonProps>`
-  ${(props) => (props.dark ? 'bg-zinc-700' : 'bg-gray-300')}
-  ${(props) => (props.dark ? 'text-slate-50' : 'text-zinc-600')}
-  ${(props) => (props.dark ? 'hover:bg-zinc-600' : 'hover:bg-zinc-700')}
-  ${(props) => (props.dark ? '' : 'hover:text-zinc-200')}
+  ${(props) => (props.$dark ? 'bg-zinc-700' : 'bg-gray-300')}
+  ${(props) => (props.$dark ? 'text-slate-50' : 'text-zinc-600')}
+  ${(props) => (props.$dark ? 'hover:bg-zinc-600' : 'hover:bg-zinc-700')}
+  ${(props) => (props.$dark ? '' : 'hover:text-zinc-200')}
 
   group
+  min-h-[36px]
+  min-w-[80px]
   text-sm
   font-medium
+  py-1
+  px-3
   flex
   items-center 
   justify-center 
   gap-2
-  py-1
-  px-3
-  min-h-[36px]
-  min-w-[80px]
   rounded-lg
+
   transition-colors
 `;
 
-const iconColor = (dark: boolean) => {
-  return dark
+const iconColor = ($dark: $Dark) => {
+  return $dark
     ? 'stroke-slate-50'
     : 'stroke-zinc-500 group-hover:stroke-zinc-300 transition-colors';
 };

@@ -5,11 +5,11 @@ const Header = tw.header`
   h-16 
   bg-slate-50 
   px-12 
-  fixed 
   flex 
   items-center 
   justify-between 
   rounded-b-2xl
+  fixed 
 `;
 
 const Nav = tw.nav`

@@ -1,19 +1,19 @@
 import type { Url } from 'next/dist/shared/lib/router/router';
-import Link from 'next/link';
 import { Montserrat } from 'next/font/google';
-
-import * as S from './style';
+import Link from 'next/link';
 
 import { Icon, type Icons } from './Icon';
+
+import * as S from './style';
 
 export type ButtonProps = {
   children: React.ReactNode;
   href: Url;
-  dark?: boolean;
   icon?: Icons;
+  dark?: boolean;
 };
 
-const font = Montserrat({ subsets: ['latin'], weight: '500' });
+const font = Montserrat({ subsets: ['latin'] });
 
 function Button({ children, href, icon, dark = false }: ButtonProps) {
   const isExternalLink = href.toString().startsWith('http');
@@ -25,7 +25,7 @@ function Button({ children, href, icon, dark = false }: ButtonProps) {
       href={href}
       target={isExternalLink ? `_blank` : ''}
     >
-      <S.Button dark={dark}>
+      <S.Button $dark={dark}>
         {icon && (
           <Icon
             style={{ width: '15px', height: '14px' }}
