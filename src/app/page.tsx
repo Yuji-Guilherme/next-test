@@ -1,12 +1,15 @@
 import { Title } from '@/components/Title';
+import { templateService } from '@/service/template';
 
 import * as S from './style';
 
-export default function Home() {
+export default async function Home() {
+  const pageTitle = await templateService();
+
   return (
     <>
       <S.Main>
-        <Title>Simple Test Next.js</Title>
+        <Title>{pageTitle.home.title}</Title>
       </S.Main>
     </>
   );

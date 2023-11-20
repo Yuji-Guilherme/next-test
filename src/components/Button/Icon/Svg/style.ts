@@ -1,3 +1,3 @@
-const svgClassName = 'group-hover:scale-110 transition-transform';
+const svgClassName = 'group-hover:scale-110 transition-all';
 
 export { svgClassName };

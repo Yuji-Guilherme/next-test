@@ -3,8 +3,6 @@ import { Title } from '@/components/Title';
 import { ImageCard } from '@/components/ImageCard';
 import { HomeButton } from '@/components/Button';
 
-import Link from 'next/link';
-
 import { MainWithGap } from '../style';
 import * as S from './style';
 
@@ -15,15 +13,9 @@ export default function Gallery() {
       <MainWithGap>
         <Title>Gallery</Title>
         <S.ImageCardWrapper>
-          <Link href={{ query: { image: 1 } }}>
-            <ImageCard imageId={1} />
-          </Link>
-          <Link href={{ query: { image: 2 } }}>
-            <ImageCard imageId={2} />
-          </Link>
-          <Link href={{ query: { image: 3 } }}>
-            <ImageCard imageId={3} />
-          </Link>
+          <ImageCard href={{ query: { image: 1 } }} imageId={1} />
+          <ImageCard href={{ query: { image: 2 } }} imageId={2} />
+          <ImageCard href={{ query: { image: 3 } }} imageId={3} />
         </S.ImageCardWrapper>
         <HomeButton />
       </MainWithGap>

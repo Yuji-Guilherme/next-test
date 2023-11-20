@@ -29,7 +29,7 @@ const Button = tw.button<StyledButtonProps>`
 const iconColor = ($dark: $Dark) => {
   return $dark
     ? 'stroke-slate-50'
-    : 'stroke-zinc-500 group-hover:stroke-zinc-300 transition-colors';
+    : 'stroke-zinc-500 group-hover:stroke-zinc-300 group-hover:fill-zinc-300 transition-colors';
 };
 
 export { Button, iconColor };
