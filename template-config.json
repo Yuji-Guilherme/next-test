@@ -1,0 +1,10 @@
+{
+    "pages": {
+        "home": {
+            "title": "Simple Test Next.js"
+        },
+        "pageId": {
+            "title": "Simple Page"
+        }
+    }
+}
