@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Bitter } from 'next/font/google';
 
-import { PageTransition } from '@/patterns/PageTransition';
 import { Header } from '@/patterns/Header';
 
 import './index.css';
@@ -21,10 +20,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={font.className}>
-        <PageTransition>
-          <Header />
-          {children}
-        </PageTransition>
+        <Header />
+        {children}
       </body>
     </html>
   );
